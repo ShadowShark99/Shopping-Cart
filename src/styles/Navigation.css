@@ -3,6 +3,8 @@
   color: white;
   background-color: rgb(41, 41, 59);
   grid-template-rows: 100px 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .nav-options {
