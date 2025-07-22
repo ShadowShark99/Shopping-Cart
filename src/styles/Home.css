@@ -1,6 +1,11 @@
 .home-page {
   display: grid;
-  grid-template-rows: 2fr 3fr;
+  grid-template-rows: 200px 1fr;
+}
+
+.home-header {
+  display: flex;
+  justify-content: center;
 }
 
 .advertise {
@@ -10,9 +15,24 @@
 
 .products {
   display: grid;
+  align-items: center;
+  width: auto;
+  height: auto;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 1px black solid;
+}
+
+.subtitle {
+  display: grid;
+  justify-content: center;
+  font-size: 2em;
 }
 
 img {
+  width: 100%;
   object-fit: contain;
 }
