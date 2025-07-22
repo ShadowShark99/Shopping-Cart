@@ -8,19 +8,19 @@ function App() {
   //fetch('https://fakestoreapi.com/products')
   // .then(response => response.json())
   // .then(data => console.log(data));
-
+  console.log("app loading");
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      //const response = await fetch('https://fakestoreapi.com/products');
-      const response = await fetch('https://fakestoreapi.com/products');
-      const result = await response.json();
-      console.log(result);
-      setProducts(result);
-    };
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     //const response = await fetch('https://fakestoreapi.com/products');
+  //     const response = await fetch('https://fakestoreapi.com/products');
+  //     const result = await response.json();
+  //     console.log(result);
+  //     setProducts(result);
+  //   };
+  //   fetchProducts();
+  // }, []);
   return (
     <div className ="layout">
       <Navigation></Navigation>

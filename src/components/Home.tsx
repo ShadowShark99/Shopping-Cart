@@ -1,6 +1,6 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
-
+import "../styles/Home.css";
 const Home = () => {
 
   type Product = { image: string; [key: string]: any };
@@ -37,16 +37,28 @@ const Home = () => {
     return sources;
   };
 
-  const sources = genImages(n);
+  //const sources = genImages(n);
 
   return (
     <div className="home-page">
-      <h2>Welcome Home To SharkBite</h2>
+      <div className="home-header">
+        <h2>Welcome Home To SharkBite</h2>
+      </div>
+      
       <div className="advertise">
         <div className="products">
-          <img src={sources[0]}></img>
-          <img src={sources[1]}></img>
-          <img src={sources[2]}></img>
+          
+            {/* <div>
+            <img src={sources[0]}></img>
+          </div>
+          <div>
+            <img src={sources[1]}></img>
+          </div>
+          <div>
+            <img src={sources[2]}></img>
+          </div> */}
+          
+          
         </div>
         <div>
           Buy things for your pet shark!

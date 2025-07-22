@@ -6,7 +6,6 @@ import App from './App.tsx'
 import routes from './routes.tsx';
 
 const router = createBrowserRouter(routes);
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>

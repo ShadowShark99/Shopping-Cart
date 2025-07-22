@@ -12,10 +12,10 @@ const routes = [
       { path: "shop", element: <Shop></Shop>}
     ]
   },
-   {
-     path: "shop",
-     element: <Shop />,
-   },
+  //  {
+  //    path: "shop",
+  //    element: <Shop />,
+  //  },
 ];
 
 export default routes;
