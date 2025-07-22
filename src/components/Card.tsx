@@ -8,20 +8,26 @@ interface Props{
 
 type OutletContextType = {
   [key: string]: any; // Replace 'any' with a more specific type if possible
+  toggleBuy: (arg0: any) => void;
 };
 
 
 
 const Card = ({item}: Props) => {
 
-  const product = useOutletContext<OutletContextType>()[item];
+  const {products, toggleBuy} = useOutletContext<OutletContextType>();
+  const product = products[item];
 
+  if(!product)
+  {
+    return <div>out of stock</div>
+  }
   return (
     <div className="card">
       <img src={product.image}></img>
       <div>{product.title}</div>
       <div>{product.price}</div>
-      
+      <button onClick={() => toggleBuy(item)}>add/remove</button>
     </div>
   )
 }

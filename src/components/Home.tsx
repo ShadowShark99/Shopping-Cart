@@ -4,10 +4,15 @@ import "../styles/Home.css";
 
 //baby_shark_by_locolobo333_dgh3876-pre.jpg
 
+type OutletContextType = {
+  [key: string]: any; // Replace 'any' with a more specific type if possible
+  handleClick: (arg0: any) => void;
+};
+
 const Home = () => {
 
-  type Product = { image: string; [key: string]: any };
-  const products = useOutletContext<Product[]>();
+  //type Product = { image: string; [key: string]: any };
+  const {products} = useOutletContext<OutletContextType>();
   console.log(products);
   const n = products.length;
 
