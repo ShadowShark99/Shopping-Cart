@@ -8,7 +8,10 @@ const Home = () => {
   console.log(products);
   const n = products.length;
 
+  //will RUN infinitely if n < 3
   const gen3Random = (n: number) => {
+    if (n > 3)
+      n = 3;
     const ret = [];
     ret.push(Math.floor(Math.random()*n));
     do
@@ -28,7 +31,12 @@ const Home = () => {
     return ret;
   };
 
+  //n needs to be less than 3
   const genImages = (n: number) => {
+    if(n < 3)
+    {
+      return [];
+    }
     const indexes = gen3Random(n);
     const sources = [];
     sources.push(products[indexes[0]].image);
@@ -37,7 +45,9 @@ const Home = () => {
     return sources;
   };
 
-  //const sources = genImages(n);
+  const sources = genImages(n);
+  const validSources = sources.length > 0;
+  console.log(validSources);
 
   return (
     <div className="home-page">
@@ -48,7 +58,8 @@ const Home = () => {
       <div className="advertise">
         <div className="products">
           
-            {/* <div>
+            {validSources && (<>
+            <div>
             <img src={sources[0]}></img>
           </div>
           <div>
@@ -56,7 +67,8 @@ const Home = () => {
           </div>
           <div>
             <img src={sources[2]}></img>
-          </div> */}
+          </div>
+            </>  )}
           
           
         </div>
