@@ -18,7 +18,7 @@ const Home = () => {
 
   //will RUN infinitely if n < 3
   const gen3Random = (n: number) => {
-    if (n > 3)
+    if (n < 3)
       n = 3;
     const ret = [];
     ret.push(Math.floor(Math.random()*n));

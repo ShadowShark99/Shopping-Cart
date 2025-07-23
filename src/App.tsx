@@ -83,7 +83,7 @@ function App() {
   return (
     <div className ="layout">
       <Navigation items={numberOfItems} totalCost = {totalCost}></Navigation>
-      <Outlet context={{products, toggleBuy}}></Outlet>
+      <Outlet context={{products, toggleBuy, bought}}></Outlet>
     </div>
   )
 }
