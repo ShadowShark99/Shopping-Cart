@@ -1,6 +1,11 @@
 .shop {
   display: grid;
-  align-items: space;
+  grid-template-rows: 100px 1fr 50px 50px;
+}
+
+.shop-head {
+  font-size: 2em;
+  text-align: center;
 }
 
 .shelf {
@@ -10,9 +15,16 @@
 
 .shop-nav {
   background-color: aliceblue;
+  border: solid 1px black;
+  border-radius: 10px;
+  margin: auto;
   display: flex;
   width: 100px;
-  height: 100px;
   justify-content: space-around;
   align-content: center;
+}
+
+.page-number {
+  display: grid;
+  justify-content: center;
 }
