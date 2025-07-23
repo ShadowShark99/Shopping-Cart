@@ -1,4 +1,5 @@
 import App from "./App";
+import Checkout from "./components/Checkout";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
@@ -12,7 +13,8 @@ const routes = [
       {index: true, element: <Home></Home>},
       { path: "shop/:page", 
         element: <Shop></Shop>
-      }
+      },
+      {path: "checkout", element: <Checkout/>}
     ]
   },
   //  {

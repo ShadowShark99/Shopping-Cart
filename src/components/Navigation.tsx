@@ -1,7 +1,9 @@
-import React from 'react'
+
 import NavigationHome from './NavigationHome'
 import NavigationShop from './NavigationShop'
+
 import "../styles/Navigation.css"
+import NavigationCheckout from './NavigationCheckout'
 
 interface Props{
   items: number;
@@ -18,6 +20,7 @@ const Navigation = ({items, totalCost}: Props) => {
           <NavigationShop></NavigationShop>
         </div>
         <div>{totalCost.toFixed(2)}$({items})</div>
+        <NavigationCheckout></NavigationCheckout>
       </div>
       
     </div>

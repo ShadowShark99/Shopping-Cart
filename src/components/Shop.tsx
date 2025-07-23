@@ -1,12 +1,8 @@
-import React from 'react'
-import { Link, useOutletContext, useParams } from 'react-router-dom'
-import Card from './Card';
+import { Link, useParams } from 'react-router-dom'
 import "../styles/Shop.css";
 import Shelf from './Shelf';
 
 const Shop = () => {
-
-  const products = useOutletContext();
   const {page} = useParams();
   const pageNumber = Number(page);
   return (

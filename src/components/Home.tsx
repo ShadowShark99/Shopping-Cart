@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useOutletContext } from 'react-router-dom'
 import "../styles/Home.css";
 
@@ -61,7 +61,7 @@ const Home = () => {
     <div className="home-page">
       <div className="home-header">
         <h2>Welcome Home To SharkBite</h2>
-        <img src="baby_shark_by_locolobo333_dgh3876-pre.jpg"/>
+        {/* <img src="baby_shark_by_locolobo333_dgh3876-pre.jpg"/> */}
       </div>
       
       <div className="advertise">

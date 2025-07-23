@@ -24,5 +24,14 @@
 
 .side-info {
   display: grid;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 100px 20px 50px;
+}
+
+.side-info > a {
+  background-color: rgb(231, 203, 82);
+  color: black;
+  border-radius: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
 }
