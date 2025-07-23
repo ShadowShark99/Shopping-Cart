@@ -1,45 +1,24 @@
 import React from 'react'
-import { useOutletContext } from 'react-router-dom'
+import { Link, useOutletContext, useParams } from 'react-router-dom'
 import Card from './Card';
 import "../styles/Shop.css";
+import Shelf from './Shelf';
 
 const Shop = () => {
 
   const products = useOutletContext();
-
+  const {page} = useParams();
+  const pageNumber = Number(page);
   return (
-    <div>
+    <div className="shop">
       <h2>Hi, want to buy something?</h2>
-      <div className="shop">
-        <div className="shelf">
-          <Card item={0}></Card>
-          <Card item={1}></Card>
-          <Card item={2}></Card>
-          <Card item={3}></Card>
-          <Card item={4}></Card>
-        </div>
-        <div className="shelf">
-          <Card item={5}></Card>
-          <Card item={6}></Card>
-          <Card item={7}></Card>
-          <Card item={8}></Card>
-          <Card item={9}></Card>
-        </div>
-        <div className="shelf">
-          <Card item={10}></Card>
-          <Card item={11}></Card>
-          <Card item={12}></Card>
-          <Card item={13}></Card>
-          <Card item={14}></Card>
-        </div>
-        <div className="shelf">
-          <Card item={15}></Card>
-          <Card item={16}></Card>
-          <Card item={17}></Card>
-          <Card item={18}></Card>
-          <Card item={19}></Card>
-        </div>
+      <Shelf page={pageNumber}></Shelf>
+        
+      <div className="shop-nav">
+        {pageNumber <4  && <Link to={`/shop/${pageNumber+1}`}>Next</Link>}
+        {pageNumber >1  && <Link to={`/shop/${pageNumber-1}`}>Prev</Link>}
       </div>
+      
     </div>
 
     
