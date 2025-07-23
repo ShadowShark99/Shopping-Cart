@@ -6,3 +6,8 @@
 .add-button {
   background-color: rgb(72, 218, 72);
 }
+
+.price {
+  width: auto;
+  background-color: rgb(226, 226, 226);
+}

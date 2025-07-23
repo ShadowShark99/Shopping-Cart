@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import "../styles/Card.css"
 
@@ -15,6 +14,7 @@ type OutletContextType = {
 
 const Card = ({item}: Props) => {
   
+   
 
   const {products, toggleBuy, bought} = useOutletContext<OutletContextType>();
   const product = products[item];
@@ -27,7 +27,7 @@ const Card = ({item}: Props) => {
     <div className="card">
       <img src={product.image}></img>
       <div>{product.title}</div>
-      <div>{product.price}</div>
+      <div className="price">{product.price.toFixed(2)}$</div>
       {bought[item] == true && <button className="remove-button" onClick={() => toggleBuy(item)}>Remove</button>}
       {!bought[item] && <button className="add-button" onClick={() => toggleBuy(item)}>Add</button>}
     </div>

@@ -9,6 +9,11 @@
 
 .nav-options {
   display: grid;
-  grid-template-rows: 50px 50px 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: end;
+}
+
+.side-info {
+  display: grid;
+  grid-template-rows: 100px 1fr;
 }
